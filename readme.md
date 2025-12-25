@@ -1,12 +1,11 @@
 
----
-
-# 📄 Threat Alert Monitoring API – README
+# 📄 Threat Monitoring & Alert Management – README
 
 ## 📌 Project Overview
 
 This project is a simplified **Threat Alert Monitoring API**, built with:
 
+* UV as the package manager instead of pip
 * Django + Django REST Framework
 * JWT Authentication
 * PostgreSQL
