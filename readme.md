@@ -1,7 +1,5 @@
 
----
-
-# 📄 Threat Alert Monitoring API – README
+# 📄 Threat Monitoring & Alert Management – README
 
 ## 📌 Project Overview
 
