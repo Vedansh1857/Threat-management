@@ -1,7 +1,7 @@
 from rest_framework.permissions import BasePermission
 
 class IsAdminOnly(BasePermission):
-    def has_permission(self, request):
+    def has_permission(self, request, view):
         user = request.user
 
         if not user.is_authenticated:

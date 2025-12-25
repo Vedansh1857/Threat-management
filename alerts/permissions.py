@@ -1,7 +1,7 @@
 from rest_framework.permissions import BasePermission, SAFE_METHODS
 
 class AdminOrAnalystReadOnly(BasePermission):
-    def has_permission(self, request):
+    def has_permission(self, request, view):
         user = request.user
 
         # Must be logged in
