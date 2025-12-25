@@ -22,10 +22,18 @@ from rest_framework_simplejwt.views import (
     TokenRefreshView,
 )
 
+from drf_spectacular.views import (
+    SpectacularAPIView,
+    SpectacularSwaggerView,
+)
+
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("api/", include("events.urls")),
     path("api/", include("alerts.urls")),
+    path("api/schema/", SpectacularAPIView.as_view(), name="schema"),  # OpenAPI schema
+    path("api/docs/",SpectacularSwaggerView.as_view(url_name="schema"),name="swagger-ui"),  # Swagger UI
     path('__debug__/', include(debug_toolbar.urls)),
     path("api/auth/token/", TokenObtainPairView.as_view(), name="token_obtain_pair"),
     path("api/auth/token/refresh/", TokenRefreshView.as_view(), name="token_refresh"),

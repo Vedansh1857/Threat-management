@@ -52,6 +52,8 @@ INSTALLED_APPS = [
     'dj_rest_auth.registration',
     'rest_framework',
     'rest_framework.authtoken',
+    "drf_spectacular",
+    "drf_spectacular_sidecar",
 
     'debug_toolbar',
     
@@ -129,7 +131,15 @@ REST_FRAMEWORK = {
         "user": "100/minute",
         "anon": "10/minute",
     },
+    "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
     "EXCEPTION_HANDLER": "exceptions.custom_exception_handler",
+}
+
+SPECTACULAR_SETTINGS = {
+    "TITLE": "Threat Alert Monitoring API",
+    "DESCRIPTION": "API documentation for the Threat Alert Monitoring service",
+    "VERSION": "1.0.0",
+    "SERVE_INCLUDE_SCHEMA": False,
 }
 
 REST_AUTH_TOKEN_MODEL = None  # Disable token model if using JWT

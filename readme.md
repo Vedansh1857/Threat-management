@@ -6,6 +6,7 @@
 This project is a simplified **Threat Alert Monitoring API**, built with:
 
 * UV as the package manager instead of pip
+* Used Django debug toolbar to analyze the DB transactions
 * Django + Django REST Framework
 * JWT Authentication
 * PostgreSQL
@@ -289,6 +290,13 @@ Access:
 ```
 http://SERVER_PUBLIC_IP:8000
 ```
+
+---
+
+## 📓 Swagger API Doc
+
+1. http://127.0.0.1:8000/api/docs/ (Swagger UI)
+2. http://127.0.0.1:8000/api/schema/ (OpenAPI Schema)
 
 ---
 
